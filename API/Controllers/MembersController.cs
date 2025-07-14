@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class MembersController(IMemberRepository memberRepository) : BaseApiController
     {
         [HttpGet]
