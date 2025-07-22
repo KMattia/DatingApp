@@ -35,7 +35,7 @@ public class LikesController(ILikeRepository likesRepository) : BaseApiControlle
 
         if (await likesRepository.SaveAllChanges()) return Ok();
 
-        return BadRequest("Failed to update liek");
+        return BadRequest("Failed to update like");
     }
 
     [HttpGet("list")]
