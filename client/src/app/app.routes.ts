@@ -13,6 +13,8 @@ import { MemberPhoto } from '../features/members/member-photo/member-photo';
 import { MemberMessages } from '../features/members/member-messages/member-messages';
 import { memberResolver } from '../features/members/member-resolver';
 import { preventUnsavedChangesGuard } from '../core/guards/prevent-unsaved-changes-guard';
+import { Admin } from '../features/admin/admin';
+import { adminGuard } from '../core/guards/admin-guard';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -36,6 +38,7 @@ export const routes: Routes = [
             },
             { path: 'lists', component: Lists },
             { path: 'messages', component: Messages },
+            { path: 'admin', component: Admin, canActivate:[adminGuard] },
         ]
     },
     { path: 'errors', component: TestErrors },
